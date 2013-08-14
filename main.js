@@ -5,6 +5,14 @@ define(["require","deep/deep", "deep-ui/stores/html"],function (require, html)
 {
 
 	var deep = require("deep/deep");
+
+
+	deep.ui = deep.ui ||  {};
+	deep.ui.swig = function(string, options) {
+		options = options || {};
+		return swig.compile(string);
+	}
+
 	//__________________________________________________
 	deep.protocoles.swig = new deep.Store();
 	deep.extensions.push({
