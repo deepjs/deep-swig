@@ -1,0 +1,16 @@
+{
+  "name": "deep-swig",
+  "version": "0.1",
+  "author": "Gilles Coomans",
+  "description": "swig related stuffs (store, protocole, utils...) for deepjs",
+  "licenses": [
+  ],
+  "repository": {
+    "type":"git",
+    "url":"ssh://git@dev.ubik.be/deep-swig"
+  },
+  "dependencies": {
+    "deep-ui":"git+ssh://git@dev.ubik.be/deep-ui"
+  },
+  "main": "./plugin"
+}

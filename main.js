@@ -13,6 +13,8 @@ define(["require","deep/deep", "deep-ui/stores/html"],function (require, html)
 		return swig.compile(string);
 	}
 
+
+
 	//__________________________________________________
 	deep.protocoles.swig = new deep.Store();
 	deep.extensions.push({
@@ -156,7 +158,7 @@ define(["require","deep/deep", "deep-ui/stores/html"],function (require, html)
 		}
 	}
 
-
+filtersObject.join_coma = comaArray;
 	/**
 	 * swig related : produce swig-macro-import string
 	 * @deprecated
