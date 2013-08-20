@@ -158,7 +158,7 @@ define(["require","deep/deep", "deep-ui/stores/html"],function (require, html)
 		}
 	}
 
-filtersObject.join_coma = comaArray;
+filtersObject.join_coma = filtersObject.comaArray;
 	/**
 	 * swig related : produce swig-macro-import string
 	 * @deprecated
