@@ -10,7 +10,8 @@
     "url":"ssh://git@dev.ubik.be/deep-swig"
   },
   "dependencies": {
-    "deep-ui":"git+ssh://git@dev.ubik.be/deep-ui"
+    "deep-ui":"git+ssh://git@dev.ubik.be/deep-ui",
+    "swig":"http://github.com/paularmstrong/swig.git"
   },
-  "main": "./plugin"
+  "main": "./main"
 }
