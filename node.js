@@ -1,7 +1,7 @@
 if(typeof define !== 'function')
 	var define = require('amdefine')(module);
 
-define(["require","deep/deep"],function (require, deep, html)
+define(["require","deep/deep"],function (require, deep)
 {
 	var deep = require("deep/deep");
 

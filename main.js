@@ -1,7 +1,7 @@
 if(typeof define !== 'function')
 	var define = require('amdefine')(module);
 
-define(["require","deep/deep", "deep-ui/stores/html"],function (require, deep, html)
+define(["require","deep/deep", "deep-ui/stores/html", "./init"],function (require, deep, html)
 {
 	var deep = require("deep/deep");
 
