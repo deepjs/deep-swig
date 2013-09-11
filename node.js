@@ -26,15 +26,12 @@ define(["require","deep/deep"],function (require, deep)
 	//__________________________________________________	
 	deep.protocoles.swig.get = function (path, options) {
 		options = options || {};
-		if(options.cache !== false && deep.mediaCache.cache[path])
-			return deep(deep.mediaCache.cache[path]).store(this);
+		if(options.cache !== false && deep.mediaCache.cache["swig::"+path])
+			return deep(deep.mediaCache.cache["swig::"+path]).store(this);
 		var def = deep.Deferred();
 		fs.readFile(path, function(err, datas){
 			if(err)
-			{
-				def.reject(err);
-				return;
-			}	
+				return def.reject(err);
 			if(datas instanceof Buffer)
 				datas = datas.toString("utf8");
 			var resi = swig.compile(datas, { filename:deep.utils.stripFirstSlash(path) });
