@@ -7,7 +7,11 @@ define(["require","deep/deep"],function (require, deep)
 	var utils = deep.utils;
 //_____________________________________________________
 	var filtersObject = {
-
+		randomItem:function(input){
+			if(input.push)
+				return input[Math.round(Math.random()*(input.length-1))];
+			return input;
+		},
 		mongoIDtoStringID:function(input){
 			//return "test";
 			return input;
