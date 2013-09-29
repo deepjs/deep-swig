@@ -10,7 +10,7 @@ define(["require","deep/deep"],function (require, deep)
 	deep.ui = deep.ui ||  {};
 	deep.ui.swig = function(string, options) {
 		options = options || {};
-		return swig.compile(string);
+		return swig.compile(string, options);
 	}
 
 	//__________________________________________________
@@ -27,7 +27,7 @@ define(["require","deep/deep"],function (require, deep)
 	deep.protocoles.swig.get = function (path, options) {
 		options = options || {};
 		if(options.cache !== false && deep.mediaCache.cache["swig::"+path])
-			return deep(deep.mediaCache.cache["swig::"+path]).store(this);
+			return deep.mediaCache.cache["swig::"+path];
 		var def = deep.Deferred();
 		fs.readFile(path, function(err, datas){
 			if(err)
@@ -39,12 +39,9 @@ define(["require","deep/deep"],function (require, deep)
 				datas = datas.toString("utf8");
 			var resi = swig.compile(datas, { filename:deep.utils.stripFirstSlash(path) });
 			//console.log("swig store : resi ", resi);
-			delete deep.mediaCache.cache["swig::"+path];
-			if((options && options.cache !== false)  || (self.options && self.options.cache !== false))
-				deep.mediaCache.manage(resi, "swig::"+path);
 			def.resolve(resi);
 		});
-		var d = deep(def.promise()).store(this);
+		var d = def.promise();
 		if(options.cache !== false || (self.options && self.options.cache !== false))
 			deep.mediaCache.manage(d, "swig::"+path);
 		return d;
