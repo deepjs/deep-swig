@@ -3,7 +3,6 @@ if(typeof define !== 'function')
 
 define(["require","deep/deep"],function (require, deep)
 {
-	
 	var deep = require("deep/deep");
 
 	swig = require("swig");
