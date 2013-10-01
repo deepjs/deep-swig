@@ -1,7 +1,7 @@
 if(typeof define !== 'function')
 	var define = require('amdefine')(module);
 
-define(["require","deep/deep"],function (require, deep)
+define(["require","deep/deep", "./init"],function (require, deep)
 {
 	if(deep.isNode)
 		swig = require("swig");
@@ -85,11 +85,12 @@ define(["require","deep/deep"],function (require, deep)
 		deep.protocoles.swig.get = function (id, options) {
 			//console.log("swig store : ", id, options)
 			options = options || {};
-			var cacheName = "swig::"+path;
+			var cacheName = "swig::"+id;
 			if(options.cache !== false && deep.mediaCache.cache[cacheName])
 				return deep.mediaCache.cache[cacheName];
 			var self = this;
-			var d = deep.when($.ajax({
+			var def = deep.Deferred();
+			var promise = $.ajax({
 				beforeSend :function(req) {
 					writeHeaders(req, {
 						"Accept" : "text/html; charset=utf-8"
@@ -99,17 +100,19 @@ define(["require","deep/deep"],function (require, deep)
 				method:"GET"
 			})
 			.done(function(data, msg, jqXHR){
-				return data;
+				def.resolve(data);
 			})
 			.fail(function(){
-				return new Error("deep.protocoles.swig failed : "+id+" - \n\n"+JSON.stringify(arguments));
-			}))
+				def.reject(deep.errors.Protocole("deep.protocoles.swig failed : "+id+" - \n\n"+JSON.stringify(arguments)));
+			});
+			//console.log("ajax promise : ", promise);
+			var d = def.promise()
 			.done(function (data) {
 				var resi = swig.compile(data, { filename:deep.utils.stripFirstSlash(id) });
 				//console.log("swig store : resi ", resi);
 				return resi;
 			});
-			if(options && options.cache !== false)
+			if(options.cache !== false)
 				deep.mediaCache.manage(d, cacheName);
 			return d;
 		};
