@@ -116,15 +116,14 @@ define(["require","deep/deep"],function (require, deep)
 		},
 		isTypeOfObject:function(input){
 			console.log("typeofobject : ", input)
-			if(typeof input === "object"){
+			if(typeof input === "object")
 				return true
-			}else{
+			else
 				return false
-			}
 		}
 	}
 
-filtersObject.join_coma = filtersObject.comaArray;
+	filtersObject.join_coma = filtersObject.comaArray;
 	/**
 	 * swig related : produce swig-macro-import string
 	 * @deprecated
@@ -164,16 +163,18 @@ filtersObject.join_coma = filtersObject.comaArray;
 		var defaultObj = {
 			filters : filtersObject,
 			allowErrors: true,
-		    autoescape: true,
-		    encoding: 'utf8',
-		    root: '/',
-		    tags: {},
-		    extensions: {},
-		    tzOffset: 0
+			autoescape: true,
+			encoding: 'utf8',
+			root: '/',
+			tags: {},
+			extensions: {},
+			tzOffset: 0
 		}
 		if(layer)
 			deep.utils.up(layer, defaultObj);
-		swig.init(defaultObj);
+		//swig.init(defaultObj);
+		for(var i in defaultObj.filters)
+			swig.setFilter(i, defaultObj.filters[i]);
 	}
 	return init;
 });

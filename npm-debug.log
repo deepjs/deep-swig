@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'swig' ]
+2 info using npm@1.2.15
+3 info using node@v0.10.2
+4 verbose read json /Users/gilles/Documents/works/deep/deepjs.org/node_modules/deep-swig/package.json
+5 verbose from cache /Users/gilles/Documents/works/deep/deepjs.org/node_modules/deep-swig/package.json
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'swig@http://github.com/paularmstrong/swig.git', null ]
+8 verbose cache add name=undefined spec="swig@http://github.com/paularmstrong/swig.git" args=["swig@http://github.com/paularmstrong/swig.git",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'swig@http://github.com/paularmstrong/swig.git',
+9 verbose parsed url   path: 'swig@http://github.com/paularmstrong/swig.git',
+9 verbose parsed url   href: 'swig@http://github.com/paularmstrong/swig.git' }
+10 verbose cache add name="swig" spec="http://github.com/paularmstrong/swig.git" args=["swig","http://github.com/paularmstrong/swig.git"]
+11 verbose parsed url { protocol: 'http:',
+11 verbose parsed url   slashes: true,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: 'github.com',
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: 'github.com',
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: '/paularmstrong/swig.git',
+11 verbose parsed url   path: '/paularmstrong/swig.git',
+11 verbose parsed url   href: 'http://github.com/paularmstrong/swig.git' }
+12 silly lockFile b97059b5-ithub-com-paularmstrong-swig-git http://github.com/paularmstrong/swig.git
+13 verbose lock http://github.com/paularmstrong/swig.git /Users/gilles/.npm/b97059b5-ithub-com-paularmstrong-swig-git.lock
+14 verbose addRemoteTarball [ 'http://github.com/paularmstrong/swig.git', null ]
+15 info retry fetch attempt 1 at 14:17:41
+16 verbose fetch to= /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz
+17 http GET http://github.com/paularmstrong/swig.git
+18 http 200 http://github.com/paularmstrong/swig.git
+19 verbose tar unpack /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz
+20 silly lockFile f6eccb31-61530-0-6159107617568225-package /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package
+21 verbose lock /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package /Users/gilles/.npm/f6eccb31-61530-0-6159107617568225-package.lock
+22 silly lockFile f4f8c55d-61530-0-6159107617568225-tmp-tgz /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz
+23 verbose lock /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz /Users/gilles/.npm/f4f8c55d-61530-0-6159107617568225-tmp-tgz.lock
+24 silly gunzTarPerm modes [ '755', '644' ]
+25 verbose read json /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package/package.json
+26 error not a package /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz
+27 silly lockFile f6eccb31-61530-0-6159107617568225-package /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package
+28 silly lockFile f6eccb31-61530-0-6159107617568225-package /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package
+29 silly lockFile f4f8c55d-61530-0-6159107617568225-tmp-tgz /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz
+30 silly lockFile f4f8c55d-61530-0-6159107617568225-tmp-tgz /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/tmp.tgz
+31 silly lockFile b97059b5-ithub-com-paularmstrong-swig-git http://github.com/paularmstrong/swig.git
+32 silly lockFile b97059b5-ithub-com-paularmstrong-swig-git http://github.com/paularmstrong/swig.git
+33 error Error: ENOENT, open '/var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package/package.json'
+34 error If you need help, you may report this log at:
+34 error     <http://github.com/isaacs/npm/issues>
+34 error or email it to:
+34 error     <npm-@googlegroups.com>
+35 error System Darwin 12.5.0
+36 error command "node" "/usr/local/bin/npm" "install" "swig"
+37 error cwd /Users/gilles/Documents/works/deep/deepjs.org/node_modules/deep-swig
+38 error node -v v0.10.2
+39 error npm -v 1.2.15
+40 error path /var/folders/yh/msh4vykn1ls6j6mmg8yxf_b80000gn/T/npm-57533/1380629861530-0.6159107617568225/package/package.json
+41 error code ENOENT
+42 error errno 34
+43 verbose exit [ 34, true ]

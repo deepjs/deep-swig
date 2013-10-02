@@ -29,7 +29,10 @@ define(["require","deep/deep"],function (require, deep)
 		deep.protocoles.swig.responseParser = function(datas, path){
 			if(datas instanceof Buffer)
 				datas = datas.toString("utf8");
-			return swig.compile(datas, { filename:deep.utils.stripFirstSlash(path) });
+
+			var res = swig.compile(datas, { filename:deep.utils.stripFirstSlash(path) });
+			//console.log("swig loaded : res : ", res);
+			return res;
 		}
 		deep.protocoles.swig.get = function (path, options) {
 			options = options || {};
@@ -38,6 +41,8 @@ define(["require","deep/deep"],function (require, deep)
 				return deep.mediaCache.cache[cacheName];
 			var def = deep.Deferred(),
 				self = this;
+
+
 
 			if(!this.watched[path])
 				this.watched[path] = fs.watch(path, function (event, filename) {
@@ -83,7 +88,7 @@ define(["require","deep/deep"],function (require, deep)
 				req.setRequestHeader(i, headers[i]);
 		};
 		deep.protocoles.swig.get = function (id, options) {
-			//console.log("swig store : ", id, options)
+			console.log("swig store : ", id, options)
 			options = options || {};
 			var cacheName = "swig::"+path;
 			if(options.cache !== false && deep.mediaCache.cache[cacheName])

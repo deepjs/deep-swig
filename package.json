@@ -7,10 +7,9 @@
   ],
   "repository": {
     "type":"git",
-    "url":"ssh://git@dev.ubik.be/deep-swig"
+    "url":"ssh://git@github.com/nomocas/deep-swig"
   },
   "dependencies": {
-    "deep-ui":"git+ssh://git@dev.ubik.be/deep-ui",
     "swig":"http://github.com/paularmstrong/swig.git"
   },
   "main": "./main"
