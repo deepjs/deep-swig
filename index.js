@@ -47,7 +47,7 @@ define(["require","deep/deep", "./init"],function (require, deep)
 					switch(event)
 					{
 						case 'change' :
-						console.log("deep swig : changes detected : reload")
+							//console.log("deep swig : changes detected : reload")
 							fs.readFile(path, function(err, datas){
 								var d = null;
 								if(err)
@@ -87,7 +87,7 @@ define(["require","deep/deep", "./init"],function (require, deep)
 				req.setRequestHeader(i, headers[i]);
 		};
 		deep.protocoles.swig.get = function (id, options) {
-			console.log("swig store : ", id, options)
+			//console.log("swig store : ", id, options)
 			options = options || {};
 			var cacheName = "swig::"+id;
 			if(options.cache !== false && deep.mediaCache.cache[cacheName])
