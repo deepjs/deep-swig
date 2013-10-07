@@ -30,7 +30,7 @@ define(["require","deep/deep", "./init"],function (require, deep)
 			if(datas instanceof Buffer)
 				datas = datas.toString("utf8");
 
-			var res = swig.compile(datas, { filename:deep.utils.stripFirstSlash(path) });
+			var res = swig.compile(datas);
 			//console.log("swig loaded : res : ", res);
 			return res;
 		}
@@ -41,14 +41,13 @@ define(["require","deep/deep", "./init"],function (require, deep)
 				return deep.mediaCache.cache[cacheName];
 			var def = deep.Deferred(),
 				self = this;
-
-
-
+				
 			if(!this.watched[path])
 				this.watched[path] = fs.watch(path, function (event, filename) {
 					switch(event)
 					{
 						case 'change' :
+						console.log("deep swig : changes detected : reload")
 							fs.readFile(path, function(err, datas){
 								var d = null;
 								if(err)
