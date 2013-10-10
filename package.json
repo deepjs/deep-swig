@@ -10,7 +10,8 @@
     "url":"ssh://git@github.com/nomocas/deep-swig"
   },
   "dependencies": {
-    "swig":"http://github.com/paularmstrong/swig.git"
+    "swig":"http://github.com/paularmstrong/swig.git",
+    "deep":"http://github.com/deepjs/deepjs.git#>=0.9.4"
   },
-  "main": "./main"
+  "main": "./index.js"
 }
