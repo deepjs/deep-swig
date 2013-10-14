@@ -1,7 +1,8 @@
+//"use strict";
 if(typeof define !== 'function')
 	var define = require('amdefine')(module);
 
-define(["require","deep/deep", "./init"],function (require, deep)
+define(["require", "deep/deep", "./init"],function (require, deep)
 {
 	if(deep.isNode)
 		swig = require("swig");
@@ -10,7 +11,7 @@ define(["require","deep/deep", "./init"],function (require, deep)
 	deep.ui.swig = function(string, options) {
 		options = options || {};
 		return swig.compile(string, options);
-	}
+	};
 
 	//__________________________________________________
 	deep.protocoles.swig = new deep.Store();
@@ -33,7 +34,7 @@ define(["require","deep/deep", "./init"],function (require, deep)
 			var res = swig.compile(datas);
 			//console.log("swig loaded : res : ", res);
 			return res;
-		}
+		};
 		deep.protocoles.swig.get = function (path, options) {
 			options = options || {};
 			var cacheName = "swig::"+path;
@@ -98,7 +99,7 @@ define(["require","deep/deep", "./init"],function (require, deep)
 				beforeSend :function(req) {
 					writeHeaders(req, {
 						"Accept" : "text/html; charset=utf-8"
-			        });
+					});
 				},
 				url:id,
 				method:"GET"
