@@ -1,7 +1,7 @@
 //"use strict";
-if(typeof define !== 'function')
-	var define = require('amdefine')(module);
-
+if (typeof define !== 'function') {
+    var define = require('amdefine')(module);
+}
 define(["require", "deep/deep", "./init"],function (require, deep)
 {
 	if(deep.isNode)
@@ -122,8 +122,12 @@ define(["require", "deep/deep", "./init"],function (require, deep)
 			return d;
 		};
 	}
-
-	return require("./init");
+	var init = require("./init");
+	deep.protocoles.swig.createDefault = function(options){
+		init(options);
+		return this;
+	}
+	return deep.protocoles.swig;
 });
 
 
