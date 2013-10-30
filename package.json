@@ -1,17 +1,18 @@
 {
   "name": "deep-swig",
   "version": "0.1.0",
-  "author": "Gilles Coomans",
+  "author": "Gilles Coomans <gilles.coomans@gmail.com>",
   "description": "swig related stuffs (store, protocole, utils...) for deepjs",
   "licenses": [
+    "LGPL 3.0"
   ],
   "repository": {
     "type":"git",
-    "url":"ssh://git@github.com/nomocas/deep-swig"
+    "url":"https://github.com/deepjs/deep-swig.git"
   },
   "dependencies": {
-    "swig":"http://github.com/paularmstrong/swig.git",
-    "deep":"http://github.com/deepjs/deepjs.git#>=0.9.4"
+    "swig":"1.1.0",
+    "deepjs":">=0.9.5"
   },
   "main": "./index.js"
 }
