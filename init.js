@@ -1,9 +1,9 @@
 if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
-define(["require","deep/deep"],function (require, deep)
+define(["require","deepjs/deep"],function (require, deep)
 {
-	//var deep = require("deep/deep");
+	//var deep = require("deepjs/deep");
 	var utils = deep.utils;
 //_____________________________________________________
 	var filtersObject = {
