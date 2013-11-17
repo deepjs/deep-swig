@@ -3,8 +3,12 @@
   "version": "0.3.0",
   "author": "Gilles Coomans <gilles.coomans@gmail.com>",
   "description": "swig related stuffs (store, protocole, utils...) for deepjs",
+  "contributors": ["Philippe Delabye <phil@chemicalrules.net>"],
   "licenses": [
-    "LGPL 3.0"
+    {
+         "type": "LGPLv3.0",
+         "url": "http://www.gnu.org/licenses/lgpl-3.0.txt"
+     }
   ],
   "repository": {
     "type":"git",
