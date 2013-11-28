@@ -27,6 +27,7 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 		var fs = require("fs");
 		//__________________________________________________	
 		deep.protocoles.swig.watched = {};
+		deep.protocoles.swig.protocole = "swig";
 		deep.protocoles.swig.responseParser = function(datas, path){
 			if(datas instanceof Buffer)
 				datas = datas.toString("utf8");
