@@ -1,5 +1,5 @@
 
-deep-swig provides protocole definition for swigjs (template engine) http://paularmstrong.github.io/swig/
+deep-swig provides protocol definition for swigjs (template engine) http://paularmstrong.github.io/swig/
 
 ## Required
 
