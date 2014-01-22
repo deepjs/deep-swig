@@ -14,9 +14,9 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 	};
 
 	//__________________________________________________
-	deep.protocols.swig = new deep.Store();
+	deep.client.Swig = new deep.Store();
 	deep.extensions.push({
-		store:deep.protocols.swig,
+		store:deep.client.Swig,
 		extensions : [
 			/(\.(swig)(\?.*)?)$/gi
 		]
@@ -26,9 +26,9 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 	{
 		var fs = require("fs");
 		//__________________________________________________	
-		deep.protocols.swig.watched = {};
-		deep.protocols.swig.protocol = "swig";
-		deep.protocols.swig.responseParser = function(datas, path){
+		deep.client.Swig.watched = {};
+		deep.client.Swig.protocol = "swig";
+		deep.client.Swig.responseParser = function(datas, path){
 			if(datas instanceof Buffer)
 				datas = datas.toString("utf8");
 
@@ -36,7 +36,7 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 			//console.log("swig loaded : res : ", res);
 			return res;
 		};
-		deep.protocols.swig.get = function (path, options) {
+		deep.client.Swig.get = function (path, options) {
 			options = options || {};
 			var cacheName = "swig::"+path;
 			if(options.cache !== false && deep.mediaCache.cache[cacheName])
@@ -88,7 +88,7 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 			for(i in headers)
 				req.setRequestHeader(i, headers[i]);
 		};
-		deep.protocols.swig.get = function (id, options) {
+		deep.client.Swig.get = function (id, options) {
 			//console.log("swig store : ", id, options)
 			options = options || {};
 			var cacheName = "swig::"+id;
@@ -109,7 +109,7 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 				def.resolve(data);
 			})
 			.fail(function(){
-				def.reject(deep.errors.Protocole("deep.protocols.swig failed : "+id+" - \n\n"+JSON.stringify(arguments)));
+				def.reject(deep.errors.Protocole("deep.client.Swig failed : "+id+" - \n\n"+JSON.stringify(arguments)));
 			});
 			//console.log("ajax promise : ", promise);
 			var d = def.promise()
@@ -124,11 +124,12 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 		};
 	}
 	var init = require("./init");
-	deep.protocols.swig.createDefault = function(options){
+	deep.client.Swig.createDefault = function(options){
 		init(options);
+		deep.protocols.swig = this;
 		return this;
 	}
-	return deep.protocols.swig;
+	return deep.client.Swig;
 });
 
 
