@@ -1,6 +1,6 @@
 {
   "name": "deep-swig",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "Gilles Coomans <gilles.coomans@gmail.com>",
   "description": "swig related stuffs (store, protocol, utils...) for deepjs",
   "contributors": ["Philippe Delabye <phil@chemicalrules.net>"],
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "swig":"1.1.0",
-    "deepjs":">=0.10.2"
+    "deepjs":">=0.10.3"
   },
   "main": "./index.js"
 }
