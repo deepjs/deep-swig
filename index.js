@@ -1,3 +1,6 @@
+/**
+ * @author Gilles Coomans <gilles.coomans@gmail.com>
+ */
 //"use strict";
 if (typeof define !== 'function') {
     var define = require('amdefine')(module);
