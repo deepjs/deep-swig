@@ -20,7 +20,7 @@ define(["require", "deepjs/deep", "./init"],function (require, deep)
 	{
 		var fs = require("fs");
 		deep.client.Swig = deep.compose.Classes(deep.Store, function(protocol, basePath, options){
-			console.log("swig constructor : ", protocol, basePath, options)
+			//console.log("swig constructor : ", protocol, basePath, options)
 			this.basePath = basePath || this.basePath || "";
 			if(options)
 				deep.utils.up(options, this);
