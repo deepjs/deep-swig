@@ -129,12 +129,12 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 		});
 	}
 	//__________________________________________________
-	deep.extensions.push({
+	/*deep.extensions.push({
 		store:deep.client.Swig,
 		extensions : [
 			/(\.(swig)(\?.*)?)$/gi
 		]
-	});
+	});*/
 	deep.client.Swig.init = require("./init");
 	deep.client.Swig.create = deep.client.Swig.createDefault = function(protocol, basePath, options){
 		if(typeof protocol === 'undefined')
