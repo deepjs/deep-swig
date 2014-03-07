@@ -5,7 +5,7 @@
 if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
-define(["require", "deepjs/deep", "./init"],function (require, deep)
+define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function (require, deep)
 {
 	if(deep.isNode)
 		swig = require("swig");
