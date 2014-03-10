@@ -27,7 +27,7 @@ define(["require","deepjs/deep"],function (require, deep)
 		},
 		select:function (input, what) {
 			console.log("swig.filter.select : ", input, what);
-			return utils.retrieveValueByPath(input, what);
+			return utils.fromPath(input, what);
 		},
 		notnull : function(input) {
 			if(input == null || input == "null")
