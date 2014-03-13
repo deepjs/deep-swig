@@ -94,7 +94,7 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 			get : function (id, options) {
 				//console.log("swig store : ", id, options)
 				options = options || {};
-				path = (deep.context.rootPath || deep.globals.rootPath || "")+this.basePath+path;
+				id = (deep.context.rootPath || deep.globals.rootPath || "")+this.basePath+id;
 				var cacheName = "swig::"+id;
 				if(options.cache !== false && deep.mediaCache.cache[cacheName])
 					return deep.mediaCache.cache[cacheName];
