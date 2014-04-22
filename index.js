@@ -11,7 +11,7 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 		swig = require("swig");
 
 	deep.ui = deep.ui ||  {};
-	deep.ui.swig = function(string, options) {
+	deep.swig = deep.ui.swig = function(string, options) {
 		options = options || {};
 		return swig.compile(string, options);
 	};
@@ -19,7 +19,7 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 	if(deep.isNode)
 	{
 		var fs = require("fs");
-		deep.client.Swig = deep.compose.Classes(deep.Store, function(protocol, basePath, options){
+		deep.Swig = deep.client.Swig = deep.compose.Classes(deep.Store, function(protocol, basePath, options){
 			//console.log("swig constructor : ", protocol, basePath, options)
 			this.basePath = basePath || this.basePath || "";
 			if(options)
@@ -136,11 +136,12 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 		]
 	});*/
 	deep.client.Swig.init = require("./init");
-	deep.client.Swig.create = deep.client.Swig.createDefault = function(protocol, basePath, options){
+	deep.Swig = deep.client.Swig.create = deep.client.Swig.createDefault = function(protocol, basePath, options){
 		if(typeof protocol === 'undefined')
 			protocol = "swig";
 		return new deep.client.Swig(protocol, basePath, options);
 	};
+	deep.Swig.init = deep.client.Swig.init;
 	return deep.client.Swig;
 });
 
