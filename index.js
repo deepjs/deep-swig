@@ -113,7 +113,7 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 					def.resolve(data);
 				})
 				.fail(function(){
-					def.reject(deep.errors.Protocole("deep.client.Swig failed : "+id+" - \n\n"+JSON.stringify(arguments)));
+					def.reject(deep.errors.Protocol("deep.client.Swig failed : "+id+" - \n\n"+JSON.stringify(arguments)));
 				});
 				//console.log("ajax promise : ", promise);
 				var d = def.promise()
