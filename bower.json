@@ -1,0 +1,26 @@
+{
+  "name": "deep-swig",
+  "main": "index.js",
+  "version": "0.5.0",
+  "homepage": "https://github.com/deepjs/deep-swig",
+  "authors": [
+    "Gilles Coomans <gilles.coomans@gmail.com>"
+  ],
+  "description": "swigjs (templating) related stuffs (store, protocol, utils...) for deepjs",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "templating",
+    "deepjs"
+  ],
+  "license": "LGPL 3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

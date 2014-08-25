@@ -1,8 +1,8 @@
 {
   "name": "deep-swig",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "author": "Gilles Coomans <gilles.coomans@gmail.com>",
-  "description": "swig related stuffs (store, protocol, utils...) for deepjs",
+  "description": "swigjs (templating) related stuffs (store, protocol, utils...) for deepjs",
   "contributors": ["Philippe Delabye <phil@chemicalrules.net>"],
   "licenses": [
     {
@@ -14,9 +14,13 @@
     "type":"git",
     "url":"https://github.com/deepjs/deep-swig.git"
   },
+  "keywords": [
+    "templating",
+    "deepjs"
+  ],
   "dependencies": {
     "swig":">=1.1.0",
-    "deepjs":">=0.10.3"
+    "deepjs":">=0.13.0"
   },
   "main": "./index.js"
 }
