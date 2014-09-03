@@ -172,7 +172,7 @@ define(["require", "deepjs/deep"], function(require, deep) {
 			tzOffset: 0
 		}
 		if (layer)
-			deep.utils.up(layer, defaultObj);
+			deep.aup(layer, defaultObj);
 		//swig.init(defaultObj);
 		for (var i in defaultObj.filters)
 			swig.setFilter(i, defaultObj.filters[i]);

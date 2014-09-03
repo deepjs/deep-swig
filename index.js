@@ -23,7 +23,7 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 			//console.log("swig constructor : ", protocol, basePath, options)
 			this.basePath = basePath || this.basePath || "";
 			if(options)
-				deep.utils.up(options, this);
+				deep.aup(options, this);
 			this.watched = this.watched || {};
 		}, {
 			responseParser : function(datas, path){
@@ -79,7 +79,7 @@ define(["require", "deepjs/deep", "./init", "deepjs/lib/stores/cache"],function 
 		deep.client.Swig = deep.compose.Classes(deep.Store, function(protocol, basePath, options){
 			this.basePath = basePath || this.basePath || "";
 			if(options)
-				deep.utils.up(options, this);
+				deep.aup(options, this);
 			this.watched = this.watched || {};
 		}, {
 			writeHeaders : function (req, headers)
