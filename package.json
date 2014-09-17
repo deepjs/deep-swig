@@ -1,26 +1,28 @@
 {
-  "name": "deep-swig",
-  "version": "0.5.1",
-  "author": "Gilles Coomans <gilles.coomans@gmail.com>",
-  "description": "swigjs (templating) related stuffs (store, protocol, utils...) for deepjs",
-  "contributors": ["Philippe Delabye <phil@chemicalrules.net>"],
-  "licenses": [
-    {
-         "type": "LGPLv3.0",
-         "url": "http://www.gnu.org/licenses/lgpl-3.0.txt"
-     }
-  ],
-  "repository": {
-    "type":"git",
-    "url":"https://github.com/deepjs/deep-swig.git"
-  },
-  "keywords": [
-    "templating",
-    "deepjs"
-  ],
-  "dependencies": {
-    "swig":">=1.1.0",
-    "deepjs":">=0.13.1"
-  },
-  "main": "./index.js"
+ "name": "deep-swig",
+ "version": "0.5.2",
+ "author": "Gilles Coomans <gilles.coomans@gmail.com>",
+ "description": "swigjs (templating) related stuffs (store, protocol, utils...) for deepjs",
+ "contributors": [
+  "Philippe Delabye <phil@chemicalrules.net>"
+ ],
+ "licenses": [
+  {
+   "type": "LGPLv3.0",
+   "url": "http://www.gnu.org/licenses/lgpl-3.0.txt"
+  }
+ ],
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/deepjs/deep-swig.git"
+ },
+ "keywords": [
+  "templating",
+  "deepjs"
+ ],
+ "dependencies": {
+  "swig": ">=1.1.0",
+  "deepjs": ">=0.13.1"
+ },
+ "main": "./index.js"
 }
