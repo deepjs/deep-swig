@@ -1,23 +1,23 @@
+# deep-swig
 
-deep-swig provides protocol definition for swigjs (template engine) http://paularmstrong.github.io/swig/
-
-## Required
-
-* deepjs >= v0.9.4
-* node >= 0.10.0
+deep-swig provides deepjs styled client for swigjs (template engine) http://paularmstrong.github.io/swig/
 
 ## Install
 ```shell
-	git clone https://github.com/deepjs/deep-swig
-	cd deep-swig
-	npm install
+npm install deep-swig
+```
+or
+
+```shell
+bower install deep-swig
 ```
 
 ## Usage
 
+// example through deepLoad
 ```javascript
 require("deep-swig")();
-require("deep-node-fs/json").createDefault();
+require("deep-node/lib/rest/file/json")();
 
 var obj = {
 	template:"swig::./path/to/my/swig/template",
