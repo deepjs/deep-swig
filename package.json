@@ -1,6 +1,6 @@
 {
  "name": "deep-swig",
- "version": "0.5.2",
+ "version": "0.5.3",
  "author": "Gilles Coomans <gilles.coomans@gmail.com>",
  "description": "swigjs (templating) related stuffs (store, protocol, utils...) for deepjs",
  "contributors": [
