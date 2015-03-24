@@ -27,7 +27,7 @@ var obj = {
 	}
 };
 
-deep(obj)
+deep.nodes(obj)
 .deepLoad()
 .done(function(obj){
 	return obj.template(obj.context);
