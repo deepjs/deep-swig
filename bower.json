@@ -1,7 +1,7 @@
 {
   "name": "deep-swig",
   "main": "index.js",
-  "version": "0.5.0",
+  "version": "0.5.4",
   "homepage": "https://github.com/deepjs/deep-swig",
   "authors": [
     "Gilles Coomans <gilles.coomans@gmail.com>"
